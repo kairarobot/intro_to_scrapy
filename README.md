@@ -7,7 +7,7 @@ Have you wanted to grab data from websites and automatically categorize it into 
 Even if you have never used a web crawler before or are not familiar with Python, come learn how to scrape data from webpages. We’ll break down the steps in creating your own bot, and you’ll start your way into web scraping!  
 
 ##Abstract:
-This is a live-coding session and everyone is welcome to code along. We will install Scrapy and use Sublime Text to edit and write our code. Bring your laptops! We’ll work through a web crawler I’ve built for scraping product IDs and names from an online seed catalogue. After a little introduction, we will start building a bot that scrapes all the species of pine trees. You’ll have a whole collection of conifers by the end.
+This is a live-coding session and everyone is welcome to code along. We will install Scrapy and use Sublime Text to edit and write our code. Bring your laptops! After a little introduction, we will start building a bot that scrapes all the species of pine trees. You’ll have a whole collection of conifers by the end.
 
 The concepts in this session will make a little more sense if you have programmed before, but even if you don’t, that’s okay. You will get the most out of it if you review the code and build another web crawler bot afterwards. The material will include object-oriented programming, parsing HTML through XPath, HTML and CSS structure, and exporting CSV files.
 
@@ -82,66 +82,9 @@ tutorial/
             __init__.py
 ```
 
-####III. Example of a Scrapy bot (Total: 5 minutes)
 
-#####A. Running the bot (1 minute)
-* I made a bot that extracted seed names and product identification numbers from [Johnny Seeds](http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&source=W_veg_ddShopBy#)
-* Download the <b>bot</b>
-```
-	$ git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia
-```
-* Go into the directory 
-```
-	$ cd dahlia
-```
-* Run the file
-```
-	$ scrapy crawl dahlia
-```
 
-#####B.	Looking through the code (4 minutes)
-* The <b>settings.py</b> is set to default
-```
-	BOT_NAME = 'dahlia'
-	
-	SPIDER_MODULES = ['dahlia.spiders']
-	NEWSPIDER_MODULE = 'dahlia.spiders'
-```
-* <b>items.py</b> defines the fields for our items
-```
-	import scrapy
-	
-	class DahliaItem(scrapy.Item):
-	    name = scrapy.Field()
-	    extendedName = scrapy.Field()
-	    identification = scrapy.Field()
-	    description = scrapy.Field()
-```
-* <b>dahlia_spider.py</b> crawls through the web using fields from items.py
-```
-	import scrapy
-	
-	from dahlia.items import DahliaItem
-	
-	class DahliaSpider(scrapy.Spider):
-		name = "dahlia"
-		allowed_domains = ["johnnyseeds.com"]
-		start_urls = [
-		"http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&pagesize=15&list=1&pagenum=9"
-		]
-	
-		def parse(self, response):
-			for sel in response.xpath('//div[@class="productResultInfo"]'):
-				item = DahliaItem()
-				item['name'] = sel.xpath('a/span[@class="nameCAT"]/text()').extract()
-				item['extendedName'] = sel.xpath('a/span[@class="extendednameCAT"]/text()').extract()
-				item['identification'] = sel.xpath('h1/text()').extract()
-				item['description'] = sel.xpath('div[@class="productResultDesc"]/div/text()').extract()
-	
-				yield item
-```
-
-####IV. Building a Scrapy bot to extract conifer plants (Tota: 15 minutes)
+####III. Building a Scrapy bot to extract conifer plants (Total: 15 minutes)
 
 #####A. Creating a new project (2 minute)
 * Go to a directory you prefer
@@ -220,3 +163,63 @@ tutorial/
 ```
 * Now you have exracted all the conifers-- happy trails!
 
+##Additional Notes:
+
+#### Example of a Scrapy bot [dahlia](git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia)
+
+#####A. Running the bot 
+* I made a bot that extracted seed names and product identification numbers from [Johnny Seeds](http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&source=W_veg_ddShopBy#)
+* Download the <b>bot</b>
+```
+	$ git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia
+```
+* Go into the directory 
+```
+	$ cd dahlia
+```
+* Run the file
+```
+	$ scrapy crawl dahlia
+```
+
+#####B.	Looking through the code
+* The <b>settings.py</b> is set to default
+```
+	BOT_NAME = 'dahlia'
+	
+	SPIDER_MODULES = ['dahlia.spiders']
+	NEWSPIDER_MODULE = 'dahlia.spiders'
+```
+* <b>items.py</b> defines the fields for our items
+```
+	import scrapy
+	
+	class DahliaItem(scrapy.Item):
+	    name = scrapy.Field()
+	    extendedName = scrapy.Field()
+	    identification = scrapy.Field()
+	    description = scrapy.Field()
+```
+* <b>dahlia_spider.py</b> crawls through the web using fields from items.py
+```
+	import scrapy
+	
+	from dahlia.items import DahliaItem
+	
+	class DahliaSpider(scrapy.Spider):
+		name = "dahlia"
+		allowed_domains = ["johnnyseeds.com"]
+		start_urls = [
+		"http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&pagesize=15&list=1&pagenum=9"
+		]
+	
+		def parse(self, response):
+			for sel in response.xpath('//div[@class="productResultInfo"]'):
+				item = DahliaItem()
+				item['name'] = sel.xpath('a/span[@class="nameCAT"]/text()').extract()
+				item['extendedName'] = sel.xpath('a/span[@class="extendednameCAT"]/text()').extract()
+				item['identification'] = sel.xpath('h1/text()').extract()
+				item['description'] = sel.xpath('div[@class="productResultDesc"]/div/text()').extract()
+	
+				yield item
+```
