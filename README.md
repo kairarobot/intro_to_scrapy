@@ -86,8 +86,12 @@ tutorial/
 
 #####A. Running the bot (1 minute)
 * I made a bot that extracted seed names and product identification numbers from [Johnny Seeds](http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&source=W_veg_ddShopBy#)
-* I did not configure additional changes in the settings.py file. I stayed with the default.
+* Download the <b>bot</b>
+```
+$ git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia
+```
 
+* This is the default settings.py file 
 ```
 BOT_NAME = 'dahlia'
 
