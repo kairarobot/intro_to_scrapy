@@ -209,5 +209,14 @@ tutorial/
 ```
 * Go back to root project directory  and run the bot
 
-#####E. Running the bot we built and exporting the data as a csv file
+#####E. Running the bot we built and exporting the data as a csv and JSON file
+* Let's export is as JSON file first
+```
+	$ scrapy crawl confiers -o trees_json.json
+```
+* Great, now let's export it as a csv!
+```
+	$ scrapy crawl confiers -o trees_csv.csv
+```
+* Now you have exracted all the conifers-- happy trails!
 
