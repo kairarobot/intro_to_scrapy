@@ -71,16 +71,15 @@ $ scrapy <command> -h
 #####C. Structure of Scrapy (2 minutes)
 
 ```
-scrapy.cfg 
-	myproject/     
-		   __init__.py    
-                     items.py     
-                     pipelines.py     
-                     settings.py     
-                     spiders/         
-		     __init__.py         
-		     spider1.py         
-  spider2.py
+tutorial/
+    scrapy.cfg            # project root directory 
+    testing/              # Python module where the project is contained
+        __init__.py
+        items.py          # defines item objects for structured data
+        pipelines.py      # performs an action over item objects
+        settings.py       # allows for further component customization
+        spiders/          # directory with your spiders
+            __init__.py
 ```
 
 III.    Example of a Scrapy bot (Total: 5 minutes)
