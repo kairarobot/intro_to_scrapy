@@ -90,7 +90,10 @@ tutorial/
 ```
 $ git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia
 ```
-
+* Go into the directory 
+```
+$ cd dahlia
+```
 * This is the default settings.py file 
 ```
 BOT_NAME = 'dahlia'
