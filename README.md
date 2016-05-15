@@ -100,6 +100,25 @@ tutorial/
 ```
 
 #####B.	Looking through the code (4 minutes)
+* The <b>settings.py</b> is set to default
+```
+BOT_NAME = 'dahlia'
+
+SPIDER_MODULES = ['dahlia.spiders']
+NEWSPIDER_MODULE = 'dahlia.spiders'
+```
+* <b>items.py</b> defines the scrapy object and properties
+```
+import scrapy
+
+class DahliaItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    name = scrapy.Field()
+    extendedName = scrapy.Field()
+    identification = scrapy.Field()
+    description = scrapy.Field()
+```
 
 ####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
 
