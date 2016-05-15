@@ -70,6 +70,7 @@ $ scrapy <command> -h
 
 #####C. Structure of Scrapy (2 minutes)
 
+```
 scrapy.cfg 
 	myproject/     
 		   __init__.py    
@@ -80,6 +81,7 @@ scrapy.cfg
 		     __init__.py         
 		     spider1.py         
   spider2.py
+```
 
 III.    Example of a Scrapy bot (Total: 5 minutes)
 
