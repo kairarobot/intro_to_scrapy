@@ -82,7 +82,7 @@ tutorial/
             __init__.py
 ```
 
-III.    Example of a Scrapy bot (Total: 5 minutes)
+###III. Example of a Scrapy bot (Total: 5 minutes)
 
 A.	Running the bot (1 minute)
 a.	scrapy crawl [bot_name]
