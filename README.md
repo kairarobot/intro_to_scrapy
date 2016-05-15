@@ -84,14 +84,14 @@ tutorial/
 
 ###III. Example of a Scrapy bot (Total: 5 minutes)
 
-A.	Running the bot (1 minute)
-a.	scrapy crawl [bot_name]
-B.	Looking through the code (4 minutes)
+####A.  Running the bot (1 minute)
+* scrapy crawl [bot_name]
 
+####B.	Looking through the code (4 minutes)
 
-IV.   Building a Scrapy bot to extract conifer plants (10 minutes)
-A.	Creating a new project
-B.	Writing a model to structure data properties
-C.	Extracting HTML elements using XPath and CSS selectors
-D.	Running the bot we built and exporting the data as a csv file
+###IV.   Building a Scrapy bot to extract conifer plants (10 minutes)
+* Creating a new project
+* Writing a model to structure data properties
+* Extracting HTML elements using XPath and CSS selectors
+* Running the bot we built and exporting the data as a csv file
 
