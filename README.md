@@ -23,21 +23,19 @@ The concepts in this session will make a little more sense if you have programme
 
 #####B.	Real world examples of web scraping (1 minute)
 * Aggregating prices of video games: putting together a list of prices for products that you are interested in is a thrifty way to find the best deals
-* ..*http://www.gamestop.com/browse/games/xbox-one?nav=16k,28-xu0,131e0-ffff2418
-
+* http://www.gamestop.com/browse/games/xbox-one?nav=16k,28-xu0,131e0-ffff2418
 * Grabbing the daily weather: researchers can integrate weather data into their observations without measuring the weather with hardware tools
-	https://weather.com/weather/today/l/07601:4:US
-
+* https://weather.com/weather/today/l/07601:4:US
 * Acquiring a list of conifers: this is the information we will be extracting, which is a list of known conifers in the world
-	http://www.forestryimages.org/browse/catsubject.cfm?cat=58
+* http://www.forestryimages.org/browse/catsubject.cfm?cat=58
 
-C.	Installing Scrapy (2 minutes)
+#####C. Installing Scrapy (2 minutes)
   Requirements:
     * Python 2.7 – Scrapy does not have full support of Python 3 at the moment, and installing Scrapy in 2.7 is the most stable
     * pip – Python package management system
     * lxml – Most Linux distribution already have lxml install
 iv.	OpenSSL – Comes preinstalled in all operating systems except Windows
-d
+
 b.	$ pip install Scrapy
 i.	http://doc.scrapy.org/en/latest/intro/install.html
 
