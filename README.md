@@ -94,7 +94,7 @@ $ git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia
 ```
 $ cd dahlia
 ```
-* This is the default settings.py file 
+* This is the default <b>settings.py</b> file 
 ```
 BOT_NAME = 'dahlia'
 
