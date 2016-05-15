@@ -13,15 +13,15 @@ The concepts in this session will make a little more sense if you have programme
 
 
 ##Outline
-####Length: 25 minutes
+#####Length: 25 minutes
 
-###I.   Introduction to web scraping and installing Scrapy (Total: 5 minutes)
+####I. Introduction to web scraping and installing Scrapy (Total: 5 minutes)
 
 #####A. What is web scraping? (3 minutes)
 * Web scraping is a technique used for extracting information from websites. Its main goal is to transform unstructured content from the web, usually in an HTML format, into a structured dataset that can be saved and examined in a spreadsheet or database. 
 * Examples: human copy-and-paste, UNIX grep paired with regex, HTTP requests, computer vision web analyzers, or web-scraping softwares
 
-#####B.	Real world examples of web scraping (1 minute)
+#####B. Real world examples of web scraping (1 minute)
 * Aggregating prices of video games: putting together a list of prices for products that you are interested in is a thrifty way to find the best deals
 	+ http://www.gamestop.com/browse/games/xbox-one?nav=16k,28-xu0,131e0-ffff2418
 * Grabbing the daily weather: researchers can integrate weather data into their observations without measuring the weather with hardware tools
@@ -41,7 +41,7 @@ The concepts in this session will make a little more sense if you have programme
 * http://doc.scrapy.org/en/latest/intro/install.html
 
 
-###II.  Scrapy tools and basic structure (Total: 5 minutes)
+####II. Scrapy tools and basic structure (Total: 5 minutes)
 
 #####A. What is Scrapy?	 (1 minutes)
 * “Scrapy is an application framework for crawling web sites and extracting structured data which can be used for a wide range of useful applications, like data mining, information processing or historical archival” (scrapy.org).
@@ -82,16 +82,16 @@ tutorial/
             __init__.py
 ```
 
-###III. Example of a Scrapy bot (Total: 5 minutes)
+####III. Example of a Scrapy bot (Total: 5 minutes)
 
-####A.  Running the bot (1 minute)
+#####A. Running the bot (1 minute)
 * scrapy crawl [bot_name]
 
-####B.	Looking through the code (4 minutes)
+#####B.	Looking through the code (4 minutes)
 
-###IV.   Building a Scrapy bot to extract conifer plants (10 minutes)
-* Creating a new project
-* Writing a model to structure data properties
-* Extracting HTML elements using XPath and CSS selectors
-* Running the bot we built and exporting the data as a csv file
+####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
+#####A. Creating a new project
+#####B. Writing a model to structure data properties
+#####C. Extracting HTML elements using XPath and CSS selectors
+#####D. Running the bot we built and exporting the data as a csv file
 
