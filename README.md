@@ -86,16 +86,25 @@ tutorial/
 
 #####A. Running the bot (1 minute)
 * I'm made a bot that extracted seed names and product identification numbers from [Johnny Seeds](http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&source=W_veg_ddShopBy#)
-* I did not specify anything in the settings file
-* 
+* I did not configure additional changes in the settings.py file. I stayed with the default.
+python```
+BOT_NAME = 'dahlia'
+
+SPIDER_MODULES = ['dahlia.spiders']
+NEWSPIDER_MODULE = 'dahlia.spiders'
+```
 ```
 $ scrapy crawl [bot_name]
 ```
 #####B.	Looking through the code (4 minutes)
 
 ####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
+
 #####A. Creating a new project
+
 #####B. Writing a model to structure data properties
+
 #####C. Extracting HTML elements using XPath and CSS selectors
+
 #####D. Running the bot we built and exporting the data as a csv file
 
