@@ -27,7 +27,7 @@ The concepts in this session will make a little more sense if you have programme
 * Grabbing the daily weather: researchers can integrate weather data into their observations without measuring the weather with hardware tools
 	+ https://weather.com/weather/today/l/07601:4:US
 * Acquiring a list of conifers: this is the information we will be extracting, which is a list of known conifers in the world
-	+ http://www.forestryimages.org/browse/catsubject.cfm?cat=58
+	+ http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 
 #####C. Installing Scrapy (2 minutes)
 * <em>Requirements:</em>
@@ -151,7 +151,7 @@ tutorial/
 ```
 
 #####B. Defining field items in <b>items.py</b>
-* Check the website with conifers again: http://www.forestryimages.org/browse/catsubject.cfm?cat=58
+* Check the website with conifers again: http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 * Notice the names and scientific names? We'll extract those.
 * Open up <b>items.py</b> 
 * We will add <b>name</b> and <b>scientific_name</b> as fields to our item
@@ -166,7 +166,31 @@ tutorial/
 #####C. Building the bot
 * Open up spiders directory and it contains no spiders at the moment
 * We will add a spider now
-* Create a new file and name it <b>confifers_spider.py</b> inside the spiders directory
+* Create a new file and name it <b>conifers_spider.py</b> inside the spiders directory
+* Let's clone the web page first
+```
+	import scrapy
+	from conifers.items import ConifersItem
+	
+	class ConifersSpider(scrapy.Spider):
+		name = "conifers"
+		allowed_domains = ["greatplantpicks.org"]
+		start_urls = [
+		"http://www.greatplantpicks.org/plantlists/by_plant_type/conifer"]
+	
+		def parse(self, response):
+			filename = response.url.split("/")[-2] + '.html'
+			with open(filename, 'wb') as f:
+				f.write(response.body)
+```
+* Save <b>conifers.py</b>
+* Now, go back to the project root directory
+* Run your bot
+```
+	$ scrapy crawl conifers
+```
+* You should now see <b>by_plant_type.html</b> in your directory
+
 
 #####D. Extracting HTML elements using XPath and CSS selectors
 
