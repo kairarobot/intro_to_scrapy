@@ -59,14 +59,14 @@ $ scrapy <command> -h
 	+ view
 	+ version
 
-ii.	Project-only commands
-1.	crawl
-2.	check
-3.	list
-4.	edit
-5.	parse
-6.	genspider
-7.	bench
+* Project-only commands
+	+ crawl
+	+ check
+	+ list
+	+ edit
+	+ parse
+	+ genspider
+	+ bench
 
 C.	Structure of Scrapy (2 minutes)
 
