@@ -86,7 +86,7 @@ tutorial/
 
 ####III. Building a Scrapy bot to extract conifer plants (Total: 15 minutes)
 
-#####A. Creating a new project (2 minute)
+#####A. Creating a new project (1 minute)
 * Go to a directory you prefer
 * Create a new scrapy project
 ```
