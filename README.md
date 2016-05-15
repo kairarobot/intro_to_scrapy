@@ -87,12 +87,14 @@ tutorial/
 #####A. Running the bot (1 minute)
 * I'm made a bot that extracted seed names and product identification numbers from [Johnny Seeds](http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&source=W_veg_ddShopBy#)
 * I did not configure additional changes in the settings.py file. I stayed with the default.
+
 python```
 BOT_NAME = 'dahlia'
 
 SPIDER_MODULES = ['dahlia.spiders']
 NEWSPIDER_MODULE = 'dahlia.spiders'
 ```
+
 ```
 $ scrapy crawl [bot_name]
 ```
