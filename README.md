@@ -23,7 +23,7 @@ The concepts in this session will make a little more sense if you have programme
 
 #####B.	Real world examples of web scraping (1 minute)
 * Aggregating prices of video games: putting together a list of prices for products that you are interested in is a thrifty way to find the best deals
-**http://www.gamestop.com/browse/games/xbox-one?nav=16k,28-xu0,131e0-ffff2418
+..*http://www.gamestop.com/browse/games/xbox-one?nav=16k,28-xu0,131e0-ffff2418
 
 * Grabbing the daily weather: researchers can integrate weather data into their observations without measuring the weather with hardware tools
 	https://weather.com/weather/today/l/07601:4:US
