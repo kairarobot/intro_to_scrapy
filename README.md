@@ -141,16 +141,16 @@ tutorial/
 				yield item
 ```
 
-####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
+####IV. Building a Scrapy bot to extract conifer plants (Tota: 15 minutes)
 
-#####A. Creating a new project
+#####A. Creating a new project (2 minute)
 * Go to a directory you prefer
 * Create a new scrapy project
 ```
 	$ scrapy startproject conifers
 ```
 
-#####B. Defining field items in <b>items.py</b>
+#####B. Defining field items in <b>items.py</b> (4 minutes)
 * Check the website with conifers again: http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 * Notice the names and scientific names? We'll extract those.
 * Open up <b>items.py</b> 
@@ -164,7 +164,7 @@ tutorial/
 	    species = scrapy.Field()
 	    pass
 ```
-#####C. Building the bot
+#####C. Building the bot (4 minutes)
 * Open up spiders directory and it contains no spiders at the moment
 * We will add a spider now
 * Create a new file and name it <b>conifers_spider.py</b> inside the spiders directory
@@ -194,7 +194,7 @@ tutorial/
 * Go back to <b>conifers_spider.py</b> and comment out the function parse
 
 
-#####D. Extracting HTML elements using XPath and CSS selectors
+#####D. Extracting HTML elements using XPath and CSS selectors (4 minutes)
 * We want to retrieve <em>only</em> the common names and scientific names
 * To do this, we need to refer to create an item for each one and generate all these objects
 * Add this new parse function with the old still commented
@@ -209,7 +209,7 @@ tutorial/
 ```
 * Go back to root project directory  and run the bot
 
-#####E. Running the bot we built and exporting the data as a csv and JSON file
+#####E. Running the bot we built and exporting the data as a csv and JSON file (2 minutes)
 * Let's export is as JSON file first
 ```
 	$ scrapy crawl confiers -o trees_json.json
