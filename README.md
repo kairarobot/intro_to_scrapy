@@ -154,13 +154,14 @@ tutorial/
 * Check the website with conifers again: http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 * Notice the names and scientific names? We'll extract those.
 * Open up <b>items.py</b> 
-* We will add <b>name</b> and <b>scientific_name</b> as fields to our item
+* We will add <b>name</b>, <b>genus</b>, and <b>species</b> as fields to our item
 ```
 	import scrapy
 	
 	class ConifersItem(scrapy.Item):
 	    name = scrapy.Field()
-	    scientific_name = scrapy.Field()
+	    genus = scrapy.Field()
+	    species = scrapy.Field()
 	    pass
 ```
 #####C. Building the bot
@@ -190,9 +191,23 @@ tutorial/
 	$ scrapy crawl conifers
 ```
 * You should now see <b>by_plant_type.html</b> in your directory
+* Go back to <b>conifers_spider.py</b> and comment out the function parse
 
 
 #####D. Extracting HTML elements using XPath and CSS selectors
+* We want to retrieve <em>only</em> the common names and scientific names
+* To do this, we need to refer to create an item for each one and generate all these objects
+* Add this new parse function with the old still commented
+```
+	def parse(self, response):
+		for sel in response.xpath('//tbody/tr'):
+			item = ConifersItem()
+			item['name'] = sel.xpath('td[@class="common-name"]/a/text()').extract()
+			item['genus'] = sel.xpath('td[@class="plantname"]/a/span[@class="genus"]/text()').extract()
+			item['species'] = sel.xpath('td[@class="plantname"]/a/span[@class="species"]/text()').extract()
+			yield item
+```
+* Go back to root project directory  and run the bot
 
 #####E. Running the bot we built and exporting the data as a csv file
 
