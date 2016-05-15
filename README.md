@@ -150,7 +150,19 @@ tutorial/
 	$ scrapy startproject conifers
 ```
 
-#####B. Writing a model to structure data properties
+#####B. Defining field items in <b>items.py</b>
+* Check the website with conifers again: http://www.forestryimages.org/browse/catsubject.cfm?cat=58
+* Notice the names and scientific names? We'll extract those.
+* Open up <b>items.py</b> 
+* We will add <b>name</b> and <b>scientific_name</b> as fields to our item
+```
+	import scrapy
+	
+	class ConifersItem(scrapy.Item):
+	    name = scrapy.Field()
+	    scientific_name = scrapy.Field()
+	    pass
+```
 
 #####C. Extracting HTML elements using XPath and CSS selectors
 
