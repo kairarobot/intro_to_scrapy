@@ -18,8 +18,8 @@ The concepts in this session will make a little more sense if you have programme
 ###I.   Introduction to web scraping and installing Scrapy (Total: 5 minutes)
 
 ####A.	What is web scraping? (3 minutes)
-	..*Web scraping is a technique used for extracting information from websites. Its main goal is to transform unstructured content from the web, usually in an HTML format, into a structured dataset that can be saved and examined in a spreadsheet or database. 
-	..*Examples: human copy-and-paste, UNIX grep paired with regex, HTTP requests, computer vision web analyzers, or web-scraping softwares
+..*Web scraping is a technique used for extracting information from websites. Its main goal is to transform unstructured content from the web, usually in an HTML format, into a structured dataset that can be saved and examined in a spreadsheet or database. 
+..*Examples: human copy-and-paste, UNIX grep paired with regex, HTTP requests, computer vision web analyzers, or web-scraping softwares
 
 ####B.	Real world examples of web scraping (1 minute)
 a.	Aggregating prices of video games: putting together a list of prices for products that you are interested in is a thrifty way to find the best deals
