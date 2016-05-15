@@ -30,14 +30,16 @@ The concepts in this session will make a little more sense if you have programme
 * http://www.forestryimages.org/browse/catsubject.cfm?cat=58
 
 #####C. Installing Scrapy (2 minutes)
-  Requirements:
-    * Python 2.7 – Scrapy does not have full support of Python 3 at the moment, and installing Scrapy in 2.7 is the most stable
-    * pip – Python package management system
-    * lxml – Most Linux distribution already have lxml install
-iv.	OpenSSL – Comes preinstalled in all operating systems except Windows
+* <em>Requirements:</em>
+* Python 2.7 – Scrapy does not have full support of Python 3 at the moment, and installing Scrapy in 2.7 is the most stable
+* pip – Python package management system
+* lxml – Most Linux distribution already have lxml install
+* OpenSSL – Comes preinstalled in all operating systems except Windows
+```
+	$ pip install Scrapy
+```
 
-b.	$ pip install Scrapy
-i.	http://doc.scrapy.org/en/latest/intro/install.html
+* http://doc.scrapy.org/en/latest/intro/install.html
 
 
 II.    Scrapy tools and basic structure (Total: 5 minutes)
