@@ -117,7 +117,7 @@ tutorial/
 	    identification = scrapy.Field()
 	    description = scrapy.Field()
 ```
-* <b>dahlia_spider.py</b> crawls through the web using items.py properties
+* <b>dahlia_spider.py</b> crawls through the web using fields from items.py
 ```
 	import scrapy
 	
@@ -144,6 +144,11 @@ tutorial/
 ####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
 
 #####A. Creating a new project
+* Go to a directory you prefer
+* Create a new scrapy project
+```
+	$ scrapy startproject conifers
+```
 
 #####B. Writing a model to structure data properties
 
