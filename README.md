@@ -85,8 +85,12 @@ tutorial/
 ####III. Example of a Scrapy bot (Total: 5 minutes)
 
 #####A. Running the bot (1 minute)
-* scrapy crawl [bot_name]
-
+* I'm made a bot that extracted seed names and product identification numbers from [Johnny Seeds](http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&source=W_veg_ddShopBy#)
+* I did not specify anything in the settings file
+* 
+```
+$ scrapy crawl [bot_name]
+```
 #####B.	Looking through the code (4 minutes)
 
 ####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
