@@ -38,26 +38,26 @@ The concepts in this session will make a little more sense if you have programme
 ```
 	$ pip install Scrapy
 ```
-
 * http://doc.scrapy.org/en/latest/intro/install.html
 
 
-II.    Scrapy tools and basic structure (Total: 5 minutes)
+###II.  Scrapy tools and basic structure (Total: 5 minutes)
 
-A.	What is Scrapy?	 (1 minutes)
-a.	“Scrapy is an application framework for crawling web sites and extracting structured data which can be used for a wide range of useful applications, like data mining, information processing or historical archival” (scrapy.org).
+####A. What is Scrapy?	 (1 minutes)
+* “Scrapy is an application framework for crawling web sites and extracting structured data which can be used for a wide range of useful applications, like data mining, information processing or historical archival” (scrapy.org).
 	
-B.	List of Scrapy command-line tool (2 minutes)
-a.	$ scrapy <command> -h 
-
-i.	Global commands:
-1.	startproject
-2.	settings
-3.	runspider
-4.	shell
-5.	fetch
-6.	view
-7.	version
+####B. List of Scrapy command-line tool (2 minutes)
+```
+$ scrapy <command> -h 
+```
+* Global commands:
+	+ startproject
+	+ settings
+	+ runspider
+	+ shell
+	+ fetch
+	+ view
+	+ version
 
 ii.	Project-only commands
 1.	crawl
