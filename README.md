@@ -107,13 +107,11 @@ BOT_NAME = 'dahlia'
 SPIDER_MODULES = ['dahlia.spiders']
 NEWSPIDER_MODULE = 'dahlia.spiders'
 ```
-* <b>items.py</b> defines the scrapy object and properties
+* <b>items.py</b> defines the fields for our items
 ```
 import scrapy
 
 class DahliaItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
     name = scrapy.Field()
     extendedName = scrapy.Field()
     identification = scrapy.Field()
