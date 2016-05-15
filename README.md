@@ -43,10 +43,10 @@ The concepts in this session will make a little more sense if you have programme
 
 ###II.  Scrapy tools and basic structure (Total: 5 minutes)
 
-####A. What is Scrapy?	 (1 minutes)
+#####A. What is Scrapy?	 (1 minutes)
 * “Scrapy is an application framework for crawling web sites and extracting structured data which can be used for a wide range of useful applications, like data mining, information processing or historical archival” (scrapy.org).
 	
-####B. List of Scrapy command-line tool (2 minutes)
+#####B. List of Scrapy command-line tool (2 minutes)
 ```
 $ scrapy <command> -h 
 ```
@@ -68,7 +68,7 @@ $ scrapy <command> -h
 	+ genspider
 	+ bench
 
-C.	Structure of Scrapy (2 minutes)
+#####C. Structure of Scrapy (2 minutes)
 
 scrapy.cfg 
 	myproject/     
