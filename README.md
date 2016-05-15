@@ -94,17 +94,11 @@ $ git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia
 ```
 $ cd dahlia
 ```
-* This is the default <b>settings.py</b> file 
+* Run the file
 ```
-BOT_NAME = 'dahlia'
-
-SPIDER_MODULES = ['dahlia.spiders']
-NEWSPIDER_MODULE = 'dahlia.spiders'
+$ scrapy crawl dahlia
 ```
 
-```
-$ scrapy crawl [bot_name]
-```
 #####B.	Looking through the code (4 minutes)
 
 ####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
