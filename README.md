@@ -102,20 +102,43 @@ tutorial/
 #####B.	Looking through the code (4 minutes)
 * The <b>settings.py</b> is set to default
 ```
-BOT_NAME = 'dahlia'
-
-SPIDER_MODULES = ['dahlia.spiders']
-NEWSPIDER_MODULE = 'dahlia.spiders'
+	BOT_NAME = 'dahlia'
+	
+	SPIDER_MODULES = ['dahlia.spiders']
+	NEWSPIDER_MODULE = 'dahlia.spiders'
 ```
 * <b>items.py</b> defines the fields for our items
 ```
-import scrapy
-
-class DahliaItem(scrapy.Item):
-    name = scrapy.Field()
-    extendedName = scrapy.Field()
-    identification = scrapy.Field()
-    description = scrapy.Field()
+	import scrapy
+	
+	class DahliaItem(scrapy.Item):
+	    name = scrapy.Field()
+	    extendedName = scrapy.Field()
+	    identification = scrapy.Field()
+	    description = scrapy.Field()
+```
+* <b>dahlia_spider.py</b> crawls through the web using items.py properties
+```
+	import scrapy
+	
+	from dahlia.items import DahliaItem
+	
+	class DahliaSpider(scrapy.Spider):
+		name = "dahlia"
+		allowed_domains = ["johnnyseeds.com"]
+		start_urls = [
+		"http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&pagesize=15&list=1&pagenum=9"
+		]
+	
+		def parse(self, response):
+			for sel in response.xpath('//div[@class="productResultInfo"]'):
+				item = DahliaItem()
+				item['name'] = sel.xpath('a/span[@class="nameCAT"]/text()').extract()
+				item['extendedName'] = sel.xpath('a/span[@class="extendednameCAT"]/text()').extract()
+				item['identification'] = sel.xpath('h1/text()').extract()
+				item['description'] = sel.xpath('div[@class="productResultDesc"]/div/text()').extract()
+	
+				yield item
 ```
 
 ####IV. Building a Scrapy bot to extract conifer plants (10 minutes)
