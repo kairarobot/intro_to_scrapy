@@ -163,8 +163,12 @@ tutorial/
 	    scientific_name = scrapy.Field()
 	    pass
 ```
+#####C. Building the bot
+* Open up spiders directory and it contains no spiders at the moment
+* We will add a spider now
+* Create a new file and name it <b>confifers_spider.py</b> inside the spiders directory
 
-#####C. Extracting HTML elements using XPath and CSS selectors
+#####D. Extracting HTML elements using XPath and CSS selectors
 
-#####D. Running the bot we built and exporting the data as a csv file
+#####E. Running the bot we built and exporting the data as a csv file
 
