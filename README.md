@@ -37,7 +37,7 @@ C.	Installing Scrapy (2 minutes)
     * pip – Python package management system
     * lxml – Most Linux distribution already have lxml install
 iv.	OpenSSL – Comes preinstalled in all operating systems except Windows
-
+d
 b.	$ pip install Scrapy
 i.	http://doc.scrapy.org/en/latest/intro/install.html
 
