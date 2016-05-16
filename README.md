@@ -153,11 +153,11 @@ tutorial/
 #####E. Running the bot we built and exporting the data as a csv and JSON file (2 minutes)
 * Let's export this as a JSON file first
 ```
-	$ scrapy crawl confiers -o trees_json.json
+	$ scrapy crawl conifers -o trees_json.json
 ```
 * Great, now let's export it as a csv!
 ```
-	$ scrapy crawl confiers -o trees_csv.csv
+	$ scrapy crawl conifers -o trees_csv.csv
 ```
 * Now you have extracted all the conifers-- happy trails!
 
