@@ -15,7 +15,7 @@ The concepts in this session will make a little more sense if you have programme
 
 ####I. Introduction to web scraping and installing Scrapy (Total: 5 minutes)
 
-#####A. What is web scraping? (3 minutes)
+#####A. What is web scraping? (2 minutes)
 * Web scraping is a technique used for extracting information from websites. Its main goal is to transform unstructured content from the web, usually in an HTML format, into a structured dataset that can be saved and examined in a spreadsheet or database. 
 * Examples: human copy-and-paste, UNIX grep paired with regex, HTTP requests, computer vision web analyzers, or web-scraping softwares
 
@@ -27,7 +27,7 @@ The concepts in this session will make a little more sense if you have programme
 * Acquiring a list of conifers: this is the information we will be extracting, which is a list of known conifers in the world
 	+ http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 
-#####C. Installing Scrapy (1 minutes)
+#####C. Installing Scrapy (2 minute)
 * <em>Requirements:</em>
 	+ Python 2.7 – Scrapy does not have full support of Python 3 at the moment, and installing Scrapy in 2.7 is the most stable
 	+  pip – Python package management system
@@ -151,7 +151,7 @@ tutorial/
 * Go back to root project directory  and run the bot
 
 #####E. Running the bot we built and exporting the data as a csv and JSON file (2 minutes)
-* Let's export is as JSON file first
+* Let's export this as a JSON file first
 ```
 	$ scrapy crawl confiers -o trees_json.json
 ```
@@ -159,7 +159,7 @@ tutorial/
 ```
 	$ scrapy crawl confiers -o trees_csv.csv
 ```
-* Now you have exracted all the conifers-- happy trails!
+* Now you have extracted all the conifers-- happy trails!
 
 ##Additional Notes:
 
