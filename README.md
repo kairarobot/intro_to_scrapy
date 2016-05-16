@@ -2,9 +2,9 @@
 PyGotham 2016 Talk Proposal
 
 ## Description:
-Have you wanted to grab data from websites and automatically categorize it into a formatted list? Or possibly you don't want to go through the trouble of registering for API keys and just want data straight out of a web page without having to copy and paste several times? This is an introduction to web scraping and we will cover building bots through Scrapy to crawl a few sample web pages and have it extract information that we want. 
+Have you wanted to grab data from websites and automatically categorize it into a formatted list? Or maybe you want to opt out of registering for API keys and want data straight out of a web page? This is an introduction to web scraping and we will cover building bots through Scrapy to crawl a few sample web pages and have it extract information that we want. 
 
-Even if you have never used a web crawler before or are not familiar with Python, come learn how to scrape data from webpages. We’ll break down the steps in creating your own bot, and you’ll start your way into web scraping!  
+We’ll break down the steps in creating your own bot, and you’ll start your way into web scraping.
 
 ##Abstract:
 This is a live-coding session and everyone is welcome to code along. We will install Scrapy and use Sublime Text to edit and write our code. Bring your laptops! After a little introduction, we will start building a bot that scrapes all the species of pine trees. You’ll have a whole collection of conifers by the end.
