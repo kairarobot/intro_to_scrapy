@@ -27,7 +27,7 @@ The concepts in this session will make a little more sense if you have programme
 * Acquiring a list of conifers: this is the information we will be extracting, which is a list of known conifers in the world
 	+ http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 
-#####C. Installing Scrapy (2 minutes)
+#####C. Installing Scrapy (1 minutes)
 * <em>Requirements:</em>
 	+ Python 2.7 – Scrapy does not have full support of Python 3 at the moment, and installing Scrapy in 2.7 is the most stable
 	+  pip – Python package management system
