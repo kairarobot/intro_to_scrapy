@@ -7,7 +7,7 @@ Have you wanted to grab data from websites and automatically categorize it into 
 ##Abstract:
 This is a live-coding session and everyone is welcome to code along. We will install Scrapy and use Sublime Text to edit and write our code. Bring your laptops! After a little introduction, we will start building a bot that scrapes all the species of pine trees from a website to an organized dataset. You’ll have a whole collection of conifers by the end that can be accessed and analyzed in a structured JSON or CSV file.
 
-The concepts in this session will make a little more sense if you have programmed before, but even if you haven't, that’s okay. You will get the most out of it if you review the code and build another web crawler bot afterwards. The material includes object-oriented programming, parsing HTML through XPath, HTML and CSS structure, and exporting CSV and JSON files.
+The concepts in this session will make a little more sense if you have programmed before, and some knowledge of programming is recommended. You will get the most out of it if you review the code and build another web crawler bot afterwards. The material includes object-oriented programming, parsing HTML through XPath, HTML and CSS structure, and exporting CSV and JSON files.
 
 
 ##Outline:
