@@ -5,9 +5,9 @@ PyGotham 2016 Talk Proposal
 Have you wanted to grab data from websites and automatically categorize it into a formatted list? Or maybe you want to opt out of registering for API keys and want data straight out of a web page? This is an introduction to web scraping and we will cover building bots through Scrapy to crawl a few sample web pages and have it extract information that we want. Prior knowledge not required;  we’ll break down the steps in creating your own bot, and before you know it you'll be scraping the web.
 
 ##Abstract:
-This is a live-coding session and everyone is welcome to code along. We will install Scrapy and use Sublime Text to edit and write our code. Bring your laptops! After a little introduction, we will start building a bot that scrapes all the species of pine trees from a website. You’ll have a whole collection of conifers by the end.
+This is a live-coding session and everyone is welcome to code along. We will install Scrapy and use Sublime Text to edit and write our code. Bring your laptops! After a little introduction, we will start building a bot that scrapes all the species of pine trees from a website to an organized dataset. You’ll have a whole collection of conifers by the end that can be accessed and analyzed in a structured JSON or CSV file.
 
-The concepts in this session will make a little more sense if you have programmed before, but even if you don’t, that’s okay. You will get the most out of it if you review the code and build another web crawler bot afterwards. The material will include object-oriented programming, parsing HTML through XPath, HTML and CSS structure, and exporting CSV files.
+The concepts in this session will make a little more sense if you have programmed before, but even if you haven't, that’s okay. You will get the most out of it if you review the code and build another web crawler bot afterwards. The material includes object-oriented programming, parsing HTML through XPath, HTML and CSS structure, and exporting CSV and JSON files.
 
 
 ##Outline:
