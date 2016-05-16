@@ -12,7 +12,7 @@ This is a live-coding session and everyone is welcome to code along. We will ins
 The concepts in this session will make a little more sense if you have programmed before, but even if you don’t, that’s okay. You will get the most out of it if you review the code and build another web crawler bot afterwards. The material will include object-oriented programming, parsing HTML through XPath, HTML and CSS structure, and exporting CSV files.
 
 
-##Outline
+##Outline:
 #####Length: 25 minutes
 
 ####I. Introduction to web scraping and installing Scrapy (Total: 5 minutes)
