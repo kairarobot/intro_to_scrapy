@@ -1,25 +1,25 @@
-#Introduction to Web Scraping using Scrapy
+# Introduction to Web Scraping using Scrapy
 PyGotham 2016 Talk Proposal
 
 ## Description:
 Have you wanted to grab data from websites and automatically categorize it into a formatted list? Or maybe you want to opt out of registering for API keys and want data straight out of a web page? This is an introduction to web scraping and we will cover building bots through Scrapy to crawl a few sample web pages and have it extract information that we want. Prior knowledge not required;  we’ll break down the steps in creating your own bot, and before you know it you'll be scraping the web.
 
-##Abstract:
+## Abstract:
 This is a live-coding session and everyone is welcome to code along. We will install Scrapy and use Sublime Text to edit and write our code. Bring your laptops! After a little introduction, we will start building a bot that scrapes all the species of pine trees from a website to an organized dataset. You’ll have a whole collection of conifers by the end that can be accessed and analyzed in a structured JSON or CSV file.
 
 The concepts in this session will make a little more sense if you have programmed before, and some knowledge of programming is recommended. You will get the most out of it if you review the code and build another web crawler bot afterwards. The material includes object-oriented programming, parsing HTML through XPath, HTML and CSS structure, and exporting CSV and JSON files.
 
 
-##Outline:
-#####Length: 25 minutes
+## Outline:
+##### Length: 25 minutes
 
-####I. Introduction to web scraping and installing Scrapy (Total: 5 minutes)
+#### I. Introduction to web scraping and installing Scrapy (Total: 5 minutes)
 
 #####A. What is web scraping? (2 minutes)
 * Web scraping is a technique used for extracting information from websites. Its main goal is to transform unstructured content from the web, usually in an HTML format, into a structured dataset that can be saved and examined in a spreadsheet or database. 
 * Examples: human copy-and-paste, UNIX grep paired with regex, HTTP requests, computer vision web analyzers, or web-scraping softwares
 
-#####B. Real world examples of web scraping (1 minute)
+##### B. Real world examples of web scraping (1 minute)
 * Aggregating prices of video games: putting together a list of prices for products that you are interested in is a thrifty way to find the best deals
 	+ http://www.gamestop.com/browse/games/xbox-one?nav=16k,28-xu0,131e0-ffff2418
 * Grabbing the daily weather: researchers can integrate weather data into their observations without measuring the weather with hardware tools
@@ -27,7 +27,7 @@ The concepts in this session will make a little more sense if you have programme
 * Acquiring a list of conifers: this is the information we will be extracting, which is a list of known conifers in the world
 	+ http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 
-#####C. Installing Scrapy (2 minute)
+##### C. Installing Scrapy (2 minute)
 * <em>Requirements:</em>
 	+ Python 2.7 – Scrapy does not have full support of Python 3 at the moment, and installing Scrapy in 2.7 is the most stable
 	+  pip – Python package management system
@@ -39,12 +39,12 @@ The concepts in this session will make a little more sense if you have programme
 * http://doc.scrapy.org/en/latest/intro/install.html
 
 
-####II. Scrapy tools and basic structure (Total: 5 minutes)
+#### II. Scrapy tools and basic structure (Total: 5 minutes)
 
-#####A. What is Scrapy?	 (1 minutes)
+##### A. What is Scrapy?	 (1 minutes)
 * “Scrapy is an application framework for crawling web sites and extracting structured data which can be used for a wide range of useful applications, like data mining, information processing or historical archival” (scrapy.org).
 	
-#####B. List of Scrapy command-line tool (2 minutes)
+##### B. List of Scrapy command-line tool (2 minutes)
 ```
 $ scrapy <command> -h 
 ```
@@ -66,7 +66,7 @@ $ scrapy <command> -h
 	+ genspider
 	+ bench
 
-#####C. Structure of Scrapy (2 minutes)
+##### C. Structure of Scrapy (2 minutes)
 
 ```
 tutorial/
@@ -82,16 +82,16 @@ tutorial/
 
 
 
-####III. Building a Scrapy bot to extract conifer plants (Total: 15 minutes)
+#### III. Building a Scrapy bot to extract conifer plants (Total: 15 minutes)
 
-#####A. Creating a new project (1 minute)
+##### A. Creating a new project (1 minute)
 * Go to a directory you prefer
 * Create a new scrapy project
 ```
 	$ scrapy startproject conifers
 ```
 
-#####B. Defining field items in <b>items.py</b> (4 minutes)
+##### B. Defining field items in <b>items.py</b> (4 minutes)
 * Check the website with conifers again: http://www.greatplantpicks.org/plantlists/by_plant_type/conifer
 * Notice the names and scientific names? We'll extract those.
 * Open up <b>items.py</b> 
@@ -105,7 +105,7 @@ tutorial/
 	    species = scrapy.Field()
 	    pass
 ```
-#####C. Building the bot (4 minutes)
+##### C. Building the bot (4 minutes)
 * Open up spiders directory and it contains no spiders at the moment
 * We will add a spider now
 * Create a new file and name it <b>conifers_spider.py</b> inside the spiders directory
@@ -135,7 +135,7 @@ tutorial/
 * Go back to <b>conifers_spider.py</b> and comment out the function parse
 
 
-#####D. Extracting HTML elements using XPath and CSS selectors (4 minutes)
+##### D. Extracting HTML elements using XPath and CSS selectors (4 minutes)
 * We want to retrieve <em>only</em> the common names and scientific names
 * To do this, we need to refer to create an item for each one and generate all these objects
 * Add this new parse function with the old still commented
@@ -150,7 +150,7 @@ tutorial/
 ```
 * Go back to root project directory  and run the bot
 
-#####E. Running the bot we built and exporting the data as a csv and JSON file (2 minutes)
+##### E. Running the bot we built and exporting the data as a csv and JSON file (2 minutes)
 * Let's export this as a JSON file first
 ```
 	$ scrapy crawl conifers -o trees_json.json
@@ -161,11 +161,11 @@ tutorial/
 ```
 * Now you have extracted all the conifers-- happy trails!
 
-##Additional Notes:
+## Additional Notes:
 
 #### Example of a Scrapy bot [dahlia](git clone https://github.com/Zovfreullia/intro_to_scrapy/tree/master/dahlia)
 
-#####A. Running the bot 
+##### A. Running the bot 
 * I made a bot that extracted seed names and product identification numbers from [Johnny Seeds](http://www.johnnyseeds.com/v-9-greenhouse-performer.aspx?categoryid=1&source=W_veg_ddShopBy#)
 * Download the <b>bot</b>
 ```
@@ -180,7 +180,7 @@ tutorial/
 	$ scrapy crawl dahlia
 ```
 
-#####B.	Looking through the code
+##### B.	Looking through the code
 * The <b>settings.py</b> is set to default
 ```
 	BOT_NAME = 'dahlia'
